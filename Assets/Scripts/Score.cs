@@ -21,7 +21,7 @@ public class Score : MonoBehaviour
 
     public void UpdateSkor()
     {
-        TeksSkor.text = "Skore: "+Skor;
+        TeksSkor.text = "Skor: "+Skor;
         Debug.Log("Skore diupdate");
     }
 

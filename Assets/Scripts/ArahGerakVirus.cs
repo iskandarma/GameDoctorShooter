@@ -7,10 +7,13 @@ public class ArahGerakVirus : MonoBehaviour
     public Score score;
 
     private Vector3 arah;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         arah = (Vector3.zero - transform.position).normalized;
+        GameObject _gameObject = GameObject.FindGameObjectWithTag("Skor");
+        score = _gameObject.GetComponent<Score>();
         // Vector2 acak = Random.insideUnitCircle.normalized;
         // arah = new Vector3(acak.x, acak.y, 0);
     }
@@ -26,7 +29,6 @@ public class ArahGerakVirus : MonoBehaviour
         if (collision.gameObject.CompareTag("Peluru"))
         {
             score.TambahSkor();
-            score.UpdateSkor();
             Destroy(gameObject);      
         }
     }
