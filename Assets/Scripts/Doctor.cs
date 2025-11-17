@@ -1,15 +1,18 @@
+using System.Collections;
 using UnityEngine;
 
 public class Doctor : MonoBehaviour
 {
-    public Vector3 ArahSenjataDokter;
-    public Transform DokterTransform;
+   
+    public GameObject Peluru;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
+    public Transform ArahTembak;
 
-    }
+    public int JumlahMaksimalPeluru = 1;
+
+    private float Timer = 0f;
+
+    private int JumlahTembakan;
 
     // Update is called once per frame
     void Update()
@@ -23,11 +26,33 @@ public class Doctor : MonoBehaviour
         Vector3 direction = worldMousePosition - transform.position;
         
         // Hitung sudut rotasi dalam derajat
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        float SudutDokter = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         
         // mengubah rotasi dokter sesuai dengan posisi mouse
-        transform.rotation = Quaternion.Euler(0f, 0f, angle);
+        transform.rotation = Quaternion.Euler(0f, 0f, SudutDokter);
+
+        Timer += Time.deltaTime;
+
+        //reset hitung setiap 1 detik
+        if (Timer >= 1f)
+        {
+            Timer = 0f;
+            JumlahTembakan = 0;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            if (JumlahTembakan < JumlahMaksimalPeluru)
+            {
+                TembakPeluru();
+                JumlahTembakan++;
+            }
+        }
     }
 
+    void TembakPeluru()
+    {
+        Instantiate(Peluru, ArahTembak.position, ArahTembak.rotation);
+    }
 
 }
