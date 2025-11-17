@@ -20,6 +20,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Credit.unity
     guid: ba41c5ed030c8684bba6213759943034
   - enabled: 1
+    path: Assets/Scenes/HiScore.unity
+    guid: e05a4d3f47f0bc340a71cdf69f69e28b
+  - enabled: 1
     path: Assets/Scenes/HowToPlay.unity
     guid: 7f17f1f5a63667247a64788c47ad6820
   m_configObjects:
