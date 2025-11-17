@@ -1,7 +1,10 @@
 using UnityEngine;
 
-public class VIrus : MonoBehaviour
+public class SlideshowVirusKecil : MonoBehaviour
 {
+    public DatabaseVirusKecil databaseGambar;  // tempat daftar sprite
+    // public Image objectImage;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
