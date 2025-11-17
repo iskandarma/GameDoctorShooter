@@ -149,10 +149,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ea9fafe63df82b4fa2bbfe083e90609, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ArahSenjataDokter: {x: 0, y: 0, z: 0}
-  DokterTransform: {fileID: 469240520}
   Peluru: {fileID: 5697141873498539406, guid: c0d7abb135480cf4c9da05e19dd62e30, type: 3}
-  AngleDokter: 0
+  ArahTembak: {fileID: 469240520}
+  JumlahMaksimalPeluru: 1
 --- !u!212 &469240519
 SpriteRenderer:
   m_ObjectHideFlags: 0
