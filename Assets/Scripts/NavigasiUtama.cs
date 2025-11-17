@@ -25,6 +25,10 @@ public class NavigasiUtama : MonoBehaviour
     public void Exit()
     {
         SceneManager.LoadScene("Exit");
+        Application.Quit();
+        #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+        #endif
     }
     public void HowTo()
     {
