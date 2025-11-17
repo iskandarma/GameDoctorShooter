@@ -4,7 +4,12 @@ using UnityEngine;
 public class SpawnVIrus : MonoBehaviour
 {
     public GameObject VirusKecil;
+    public GameObject VirusSedang;
+    public GameObject VirusBesar;
     public bool SedangSpawn = true;
+    public DatabaseVirusKecil databaseVirusKecil;
+    public DatabaseVirusSedang databaseVirusSedang;
+    public DatabaseVirusBesar databaseVirusBesar;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -37,8 +42,48 @@ public class SpawnVIrus : MonoBehaviour
                 case 2: PosisiSpawn = new Vector3(xMin, Random.Range(yMin, yMax), 0); break; // kiri
                 case 3: PosisiSpawn = new Vector3(xMax, Random.Range(yMin, yMax), 0); break; // kanan
             }
-            Instantiate(VirusKecil, PosisiSpawn, Quaternion.identity);
+
+            // Pilih jenis virus acak
+            int jenis = Random.Range(0, 3); // 0=kecil,1=sedang,2=besar
+            GameObject JenisVirus = VirusKecil;
+            DatabaseVirusKecil dbKecil = null;
+            DatabaseVirusSedang dbSedang = null;
+            DatabaseVirusBesar dbBesar = null;
+
+            switch (jenis)
+            {
+                case 0: 
+                    JenisVirus = VirusKecil; dbKecil = databaseVirusKecil; 
+                    break;
+                case 1: 
+                    JenisVirus = VirusSedang; dbSedang = databaseVirusSedang; 
+                    break;
+                case 2: 
+                    JenisVirus = VirusBesar; dbBesar = databaseVirusBesar; 
+                    break;
+            }
+
+            // Spawn virus
+            GameObject virus = Instantiate(JenisVirus, PosisiSpawn, Quaternion.identity);
+
+            // Pilih sprite acak sesuai jenis
+            if (jenis == 0 && dbKecil != null && dbKecil.ListVirusKecil.Count > 0)
+            {
+                int index = Random.Range(0, dbKecil.ListVirusKecil.Count);
+                virus.GetComponent<SpriteRenderer>().sprite = dbKecil.ListVirusKecil[index];
+            }
+            else if (jenis == 1 && dbSedang != null && dbSedang.ListVirusSedang.Count > 0)
+            {
+                int index = Random.Range(0, dbSedang.ListVirusSedang.Count);
+                virus.GetComponent<SpriteRenderer>().sprite = dbSedang.ListVirusSedang[index];
+            }
+            else if (jenis == 2 && dbBesar != null && dbBesar.ListVirusBesar.Count > 0)
+            {
+                int index = Random.Range(0, dbBesar.ListVirusBesar.Count);
+                virus.GetComponent<SpriteRenderer>().sprite = dbBesar.ListVirusBesar[index];
+            }
+
             yield return new WaitForSeconds(2);
-        }
+            }
     }
 }

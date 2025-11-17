@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38cf3ccaf03169440968f72e8846375f, type: 3}
+  m_Name: DatabaseVirusKecil
+  m_EditorClassIdentifier: 
+  ListVirusKecil:
+  - {fileID: 5686602129714437190, guid: d1c4cacf886726b44ac22722acf53114, type: 3}
+  - {fileID: -3151197654507899791, guid: 632619a419b15634e8ae9ecaa68c3b8c, type: 3}
+  - {fileID: -1767754968745736149, guid: f3b832896923fc544ba39dbe095b9e04, type: 3}
