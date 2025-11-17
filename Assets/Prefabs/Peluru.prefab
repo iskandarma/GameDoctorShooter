@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 3485184536122157715, guid: 0163daa50368ca74bbeca9fc4e5cf2f8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -128,5 +128,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e58577928ce006a41880fb89395c6532, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isMove: 1
-  speed: 5
+  Kecepatan: 5
+  WaktuPeluru: 3
