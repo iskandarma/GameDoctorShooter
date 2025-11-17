@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 9055604323795580427}
   - component: {fileID: 8592518757758086131}
   - component: {fileID: 6396692936475121832}
-  - component: {fileID: 2806906509176723207}
   - component: {fileID: 4717187192064122012}
+  - component: {fileID: 8667781593263719575}
   m_Layer: 0
   m_Name: VirusSedang
-  m_TagString: Untagged
+  m_TagString: Virus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -117,8 +117,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &2806906509176723207
-BoxCollider2D:
+--- !u!114 &4717187192064122012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8339761103373492629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c1ae6b3203d87042b9f6a51a7c29075, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kecepatan: 2
+  score: {fileID: 0}
+--- !u!58 &8667781593263719575
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -152,27 +166,4 @@ BoxCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 9.610001, y: 9.460001}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!114 &4717187192064122012
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8339761103373492629}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c1ae6b3203d87042b9f6a51a7c29075, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  kecepatan: 2
+  m_Radius: 4.8050003

@@ -7,6 +7,7 @@ TagManager:
   - Peluru
   - VirusKecil
   - Skor
+  - Virus
   layers:
   - Default
   - TransparentFX

@@ -796,7 +796,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   VirusKecil: {fileID: 5963844305511698653, guid: e4443332a3b04cc488786285b120cc03, type: 3}
+  VirusSedang: {fileID: 8339761103373492629, guid: 6b9a5df78f08b294f87ac5908c243110, type: 3}
+  VirusBesar: {fileID: 4753358260834157433, guid: 189e3249abe42d3419ffd5ba08f3cc20, type: 3}
   SedangSpawn: 1
+  databaseVirusKecil: {fileID: 11400000, guid: 1896366093d08a6449736d29dcef15ee, type: 2}
+  databaseVirusSedang: {fileID: 11400000, guid: c5ddd090fa59b5a459bfb776efc9e55c, type: 2}
+  databaseVirusBesar: {fileID: 11400000, guid: 9e3cb33170c795749b4249f4c06b3b83, type: 2}
 --- !u!4 &1073688488
 Transform:
   m_ObjectHideFlags: 0
@@ -807,6 +812,141 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1083058385
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1083058387}
+  - component: {fileID: 1083058386}
+  m_Layer: 0
+  m_Name: SlideshowVirusKecil
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1083058386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083058385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e5e253a015caa44ab64249290de9480, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  databaseVirusKecil: {fileID: 11400000, guid: 1896366093d08a6449736d29dcef15ee, type: 2}
+--- !u!4 &1083058387
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083058385}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1717.0801, y: 956.863, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1137251515
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1137251517}
+  - component: {fileID: 1137251516}
+  m_Layer: 0
+  m_Name: SlideshowVirusSedang
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1137251516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1137251515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 137f07179dec77d46b083e2bc3b18b2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  databaseVirusSedang: {fileID: 11400000, guid: c5ddd090fa59b5a459bfb776efc9e55c, type: 2}
+--- !u!4 &1137251517
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1137251515}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1717.0801, y: 956.863, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1242156264
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1242156266}
+  - component: {fileID: 1242156265}
+  m_Layer: 0
+  m_Name: SlideshowVirusBesar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1242156265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1242156264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be2b247d6ebe9214a91dea82758841c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  databaseVirusBesar: {fileID: 11400000, guid: 9e3cb33170c795749b4249f4c06b3b83, type: 2}
+--- !u!4 &1242156266
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1242156264}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1717.0801, y: 956.863, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1139,3 +1279,6 @@ SceneRoots:
   - {fileID: 375510389}
   - {fileID: 1073688488}
   - {fileID: 1886418711}
+  - {fileID: 1083058387}
+  - {fileID: 1137251517}
+  - {fileID: 1242156266}
