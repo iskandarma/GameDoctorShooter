@@ -1,8 +1,11 @@
 using UnityEngine;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class ArahGerakVirus : MonoBehaviour
 {
     public float kecepatan = 2f;
+
+    public Score score;
+
     private Vector3 arah;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -16,5 +19,15 @@ public class NewMonoBehaviourScript : MonoBehaviour
     void Update()
     {
         transform.Translate(arah * kecepatan * Time.deltaTime);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Peluru"))
+        {
+            score.TambahSkor();
+            score.UpdateSkor();
+            Destroy(gameObject);      
+        }
     }
 }
