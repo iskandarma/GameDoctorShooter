@@ -22,7 +22,10 @@ public class Peluru : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // ketika peluru menabrak Virus
-        Destroy(gameObject);
+        if (collision.gameObject.CompareTag("VirusKecil"))
+        {
+            Destroy(gameObject);      
+        }
     }
 
 }
