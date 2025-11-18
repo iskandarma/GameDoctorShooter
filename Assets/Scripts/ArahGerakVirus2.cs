@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class ArahGerakVirus2 : MonoBehaviour
 {
@@ -7,19 +8,30 @@ public class ArahGerakVirus2 : MonoBehaviour
 
      public Score score;
 
+     public AudioSource _SFXMeledak;
+
     public int PenaltiSkor;
+
+    public Doctor _Doctor;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         arah = (Vector3.zero - transform.position).normalized;
         GameObject _gameObject = GameObject.FindGameObjectWithTag("Skor");
         score = _gameObject.GetComponent<Score>();
+        GameObject objectDoctor = GameObject.FindGameObjectWithTag("Player");
+        _Doctor = objectDoctor.GetComponent<Doctor>();
     }
 
     // Update is called once per frame
     void Update()
     {
         transform.Translate(arah * kecepatan * Time.deltaTime);
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            Debug.Log("spasi");
+            _SFXMeledak.Play();
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -64,7 +76,10 @@ public class ArahGerakVirus2 : MonoBehaviour
         if (collision.gameObject.CompareTag("Peluru"))
         {
             // score.TambahSkor();
+            _Doctor._EfekMledak.Play();
+            Debug.Log("Harusnya putar suara");
             Destroy(gameObject);      
         }
     }
+
 }

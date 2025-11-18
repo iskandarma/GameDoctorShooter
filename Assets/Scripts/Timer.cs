@@ -69,7 +69,7 @@ public class Timer : MonoBehaviour
                     if(Waktu > 0)
                     {
                         Waktu--;
-                        TeksTimer.text = Waktu.ToString();                  
+                        TeksTimer.text = "Time : " + Waktu.ToString();                  
                     } else
                     {
                         isOver = true;

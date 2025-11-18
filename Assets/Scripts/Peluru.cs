@@ -10,6 +10,8 @@ public class Peluru : MonoBehaviour
     public int skorVirusSedang;
     public int skorVirusBesar;
 
+    // public AudioSource _SFXMeledak;
+
     public Score score;
 
     void Start()
@@ -32,13 +34,16 @@ public class Peluru : MonoBehaviour
         // ketika peluru menabrak Virus
         if (collision.gameObject.CompareTag("VirusKecil"))
         {
+            // _SFXMeledak.Play();
             score.TambahSkor(skorVirusKecil);
             Destroy(gameObject);      
         } else if (collision.gameObject.CompareTag("VirusSedang"))
         {
+            // _SFXMeledak.Play();
             score.TambahSkor(skorVirusSedang);
             Destroy(gameObject);   
         } else if (collision.gameObject.CompareTag("VirusBesar")){
+            // _SFXMeledak.Play();
             score.TambahSkor(skorVirusBesar);
             Destroy(gameObject); 
         }

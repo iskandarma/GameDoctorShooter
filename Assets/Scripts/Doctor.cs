@@ -17,6 +17,9 @@ public class Doctor : MonoBehaviour
 
     public AudioSource _EfekTembak;
 
+    public AudioSource _EfekMledak;
+
+
     // Update is called once per frame
     void Update()
     {
