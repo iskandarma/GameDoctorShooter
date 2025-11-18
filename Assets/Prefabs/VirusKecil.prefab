@@ -131,6 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   kecepatan: 2
   score: {fileID: 0}
+  PenaltiSkor: 3
 --- !u!58 &2070306040322881526
 CircleCollider2D:
   m_ObjectHideFlags: 0
