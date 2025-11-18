@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 public class NavigasiUtama : MonoBehaviour
 {
     public AudioSource _BGMAwal;
+
+    public Score skor;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -22,10 +24,11 @@ public class NavigasiUtama : MonoBehaviour
     public void MainMenu()
     {
         SceneManager.LoadScene("Opening");
+        skor.SimpanSkorTertinggi();
     }
     public void Exit()
     {
-        SceneManager.LoadScene("Exit");
+        skor.SimpanSkorTertinggi();
         Application.Quit();
         #if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false;
@@ -41,6 +44,7 @@ public class NavigasiUtama : MonoBehaviour
     }
     public void Mulai()
     {
+        skor.SimpanSkorTertinggi();
         SceneManager.LoadScene("Level1");
     }
 }

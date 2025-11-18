@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TeksTimer: {fileID: 614804307}
-  Waktu: 30
+  Waktu: 5
   MaksimumWaktu: 0
   isPause: 0
   isOver: 0

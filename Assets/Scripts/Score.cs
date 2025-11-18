@@ -5,12 +5,21 @@ public class Score : MonoBehaviour
 {
     public TMP_Text TeksSkor;
 
-    public int Skor = 0;
+    public TMP_Text TeksHiSkor;
+
+    public int Skor;
+
+    public int HighScore;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        UpdateSkor();
+        // UpdateSkor();
+        Skor = PlayerPrefs.GetInt("SkorSekarang");
+        HighScore = PlayerPrefs.GetInt("HighScore");
+        TeksSkor.text = "Skor: " + Skor.ToString();
+        TeksHiSkor.text = HighScore.ToString();
+        PlayerPrefs.DeleteKey("SkorSekarang");
     }
 
     // Update is called once per frame
@@ -22,6 +31,8 @@ public class Score : MonoBehaviour
     public void UpdateSkor()
     {
         TeksSkor.text = "Skor: "+Skor;
+        PlayerPrefs.SetInt("SkorSekarang", Skor);
+        PlayerPrefs.Save();
         Debug.Log("Skore diupdate");
     }
 
@@ -40,4 +51,15 @@ public class Score : MonoBehaviour
         UpdateSkor();
         Debug.Log("Skore berkurang");
     }
+
+    public void SimpanSkorTertinggi()
+    {
+        if (Skor > HighScore)
+        {
+            HighScore = Skor;
+            PlayerPrefs.SetInt("HighScore", HighScore);
+            PlayerPrefs.Save();
+        }
+    }
+
 }
