@@ -178,7 +178,7 @@ GameObject:
   - component: {fileID: 551348702}
   m_Layer: 0
   m_Name: DIndingKanan
-  m_TagString: Untagged
+  m_TagString: DindingKiriKanan
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -391,7 +391,7 @@ GameObject:
   - component: {fileID: 1093273560}
   m_Layer: 0
   m_Name: DIndingBawah
-  m_TagString: Untagged
+  m_TagString: DindingAtasBawah
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -553,7 +553,7 @@ GameObject:
   - component: {fileID: 1301873741}
   m_Layer: 0
   m_Name: DIndingKiri
-  m_TagString: Untagged
+  m_TagString: DindingKiriKanan
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -805,7 +805,7 @@ GameObject:
   - component: {fileID: 1791476648}
   m_Layer: 0
   m_Name: DIndingAtas
-  m_TagString: Untagged
+  m_TagString: DindingAtasBawah
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

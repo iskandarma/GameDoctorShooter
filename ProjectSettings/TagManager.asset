@@ -10,6 +10,9 @@ TagManager:
   - Virus
   - VirusSedang
   - VirusBesar
+  - Dinding
+  - DindingAtasBawah
+  - DindingKiriKanan
   layers:
   - Default
   - TransparentFX
