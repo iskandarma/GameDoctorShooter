@@ -32,11 +32,13 @@ public class NavigasiUtama : MonoBehaviour
     }
     public void BukaCredit()
     {
+        _BGMAwal.Stop();
         _SFXTombolKlik.Play();
         SceneManager.LoadScene("Credit");
     }
     public void MainMenu()
     {
+        _BGMAwal.Stop();
         _SFXTombolKlik.Play();
         SceneManager.LoadScene("Opening");
         skor.SimpanSkorTertinggi();
@@ -54,11 +56,13 @@ public class NavigasiUtama : MonoBehaviour
     }
     public void HowTo()
     {
+        _BGMAwal.Stop();
         _SFXTombolKlik.Play();
         SceneManager.LoadScene("HowToPlay");
     }
     public void HiScore()
     {
+        _BGMAwal.Stop();
         _SFXTombolKlik.Play();
         SceneManager.LoadScene("HiScore");
     }
@@ -75,7 +79,6 @@ public class NavigasiUtama : MonoBehaviour
 
     public IEnumerator delaySuara()
     {
-
         _SFXEndGame.Play();
         yield return new WaitForSeconds(2f);
         _BGMAwal.Play();
