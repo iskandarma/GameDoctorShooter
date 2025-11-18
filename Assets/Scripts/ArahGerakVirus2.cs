@@ -4,10 +4,16 @@ public class ArahGerakVirus2 : MonoBehaviour
 {
     public float kecepatan = 2f;
     private Vector3 arah;
+
+     public Score score;
+
+    public int PenaltiSkor;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         arah = (Vector3.zero - transform.position).normalized;
+        GameObject _gameObject = GameObject.FindGameObjectWithTag("Skor");
+        score = _gameObject.GetComponent<Score>();
     }
 
     // Update is called once per frame
@@ -18,7 +24,7 @@ public class ArahGerakVirus2 : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Virus"))
+        if (collision.gameObject.CompareTag("VirusKecil")||collision.gameObject.CompareTag("VirusSedang")||collision.gameObject.CompareTag("VirusBesar"))
         {
             if (Mathf.Abs(arah.x) > Mathf.Abs(arah.y))
             {
@@ -53,6 +59,12 @@ public class ArahGerakVirus2 : MonoBehaviour
             }
             Debug.Log("Kena Dokter");
             arah = arah.normalized;
+            score.KurangiSkore(PenaltiSkor);  
+        }
+        if (collision.gameObject.CompareTag("Peluru"))
+        {
+            // score.TambahSkor();
+            Destroy(gameObject);      
         }
     }
 }

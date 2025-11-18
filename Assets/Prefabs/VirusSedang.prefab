@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 9055604323795580427}
   - component: {fileID: 8592518757758086131}
   - component: {fileID: 6396692936475121832}
-  - component: {fileID: 4717187192064122012}
-  - component: {fileID: 8667781593263719575}
+  - component: {fileID: -6817223715159926319}
+  - component: {fileID: 5569933965781963353}
   m_Layer: 0
   m_Name: VirusSedang
   m_TagString: VirusSedang
@@ -166,3 +166,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   kecepatan: 2
+  score: {fileID: 0}
+  PenaltiSkor: 2

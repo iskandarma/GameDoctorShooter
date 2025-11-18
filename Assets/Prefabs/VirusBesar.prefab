@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 9103569092240255814}
   - component: {fileID: 3506525569424758922}
   - component: {fileID: 2091708697826286471}
-  - component: {fileID: 7134311713063870128}
-  - component: {fileID: 6443043004102130058}
+  - component: {fileID: -2361751392192796912}
+  - component: {fileID: 4806418439554843651}
   m_Layer: 0
   m_Name: VirusBesar
   m_TagString: VirusBesar
@@ -166,3 +166,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   kecepatan: 2
+  score: {fileID: 0}
+  PenaltiSkor: 1
