@@ -8,6 +8,8 @@ public class ArahGerakVirus : MonoBehaviour
 
     private Vector3 arah;
 
+    public int PenaltiSkor;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -32,7 +34,7 @@ public class ArahGerakVirus : MonoBehaviour
             Destroy(gameObject);      
         } else if (collision.gameObject.CompareTag("Player"))
         {
-            score.KurangiSkore(10);     
+            score.KurangiSkore(PenaltiSkor);     
         } 
     }
 }
