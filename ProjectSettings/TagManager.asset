@@ -8,6 +8,8 @@ TagManager:
   - VirusKecil
   - Skor
   - Virus
+  - VirusSedang
+  - VirusBesar
   layers:
   - Default
   - TransparentFX

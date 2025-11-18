@@ -6,10 +6,18 @@ public class Peluru : MonoBehaviour
 
     public float WaktuPeluru = 3.0f;
 
+    public int skorVirusKecil;
+    public int skorVirusSedang;
+    public int skorVirusBesar;
+
+    public Score score;
+
     void Start()
     {
         // untuk menghapus peluru
         Destroy(gameObject, WaktuPeluru);
+        GameObject _gameObject = GameObject.FindGameObjectWithTag("Skor");
+        score = _gameObject.GetComponent<Score>();
     }
 
     // Update is called once per frame
@@ -22,9 +30,17 @@ public class Peluru : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // ketika peluru menabrak Virus
-        if (collision.gameObject.CompareTag("Virus"))
+        if (collision.gameObject.CompareTag("VirusKecil"))
         {
+            score.TambahSkor(skorVirusKecil);
             Destroy(gameObject);      
+        } else if (collision.gameObject.CompareTag("VirusSedang"))
+        {
+            score.TambahSkor(skorVirusSedang);
+            Destroy(gameObject);   
+        } else if (collision.gameObject.CompareTag("VirusBesar")){
+            score.TambahSkor(skorVirusBesar);
+            Destroy(gameObject); 
         }
     }
 

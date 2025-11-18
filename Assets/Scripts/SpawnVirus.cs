@@ -10,6 +10,9 @@ public class SpawnVIrus : MonoBehaviour
     public DatabaseVirusKecil databaseVirusKecil;
     public DatabaseVirusSedang databaseVirusSedang;
     public DatabaseVirusBesar databaseVirusBesar;
+
+    public int SkorVirus;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -20,12 +23,12 @@ public class SpawnVIrus : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     IEnumerator MunculkanObject()
     {
-        while(SedangSpawn == true)
+        while (SedangSpawn == true)
         {
             Vector3 PosisiSpawn = Vector3.zero;
             int sisi = Random.Range(0, 4); // 0=atas,1=bawah,2=kiri,3=kanan
@@ -52,14 +55,20 @@ public class SpawnVIrus : MonoBehaviour
 
             switch (jenis)
             {
-                case 0: 
-                    JenisVirus = VirusKecil; dbKecil = databaseVirusKecil; 
+                case 0:
+                    JenisVirus = VirusKecil; 
+                    dbKecil = databaseVirusKecil;
+                    SkorVirus = 15;
                     break;
-                case 1: 
-                    JenisVirus = VirusSedang; dbSedang = databaseVirusSedang; 
+                case 1:
+                    JenisVirus = VirusSedang; 
+                    dbSedang = databaseVirusSedang;
+                    SkorVirus = 10;
                     break;
-                case 2: 
-                    JenisVirus = VirusBesar; dbBesar = databaseVirusBesar; 
+                case 2:
+                    JenisVirus = VirusBesar; 
+                    dbBesar = databaseVirusBesar;
+                    SkorVirus = 5;
                     break;
             }
 
@@ -84,6 +93,6 @@ public class SpawnVIrus : MonoBehaviour
             }
 
             yield return new WaitForSeconds(1.5f);
-            }
+        }
     }
 }

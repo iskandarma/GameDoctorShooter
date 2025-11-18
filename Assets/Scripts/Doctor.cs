@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class Doctor : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class Doctor : MonoBehaviour
     private float Timer = 0f;
 
     private int JumlahTembakan;
+
+    public AudioSource _EfekTembak;
 
     // Update is called once per frame
     void Update()
@@ -53,6 +56,7 @@ public class Doctor : MonoBehaviour
     void TembakPeluru()
     {
         Instantiate(Peluru, ArahTembak.position, ArahTembak.rotation);
+        _EfekTembak.Play();
     }
 
 }

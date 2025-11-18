@@ -25,16 +25,18 @@ public class Score : MonoBehaviour
         Debug.Log("Skore diupdate");
     }
 
-    public void TambahSkor()
+    public void TambahSkor(int amountSkor)
     {
-        Skor++;
+        // Skor++;
+        Skor += amountSkor;
         UpdateSkor();
         Debug.Log("Skore bertambah");
     }
 
-    public void KurangiSkore()
+    public void KurangiSkore(int amountSkor)
     {
-        Skor--;
+        // Skor--;
+        Skor -= amountSkor;
         UpdateSkor();
         Debug.Log("Skore berkurang");
     }

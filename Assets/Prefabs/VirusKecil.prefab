@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2070306040322881526}
   m_Layer: 0
   m_Name: VirusKecil
-  m_TagString: Virus
+  m_TagString: VirusKecil
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

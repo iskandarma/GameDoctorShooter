@@ -131,6 +131,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Kecepatan: 5
   WaktuPeluru: 3
+  skorVirusKecil: 3
+  skorVirusSedang: 2
+  skorVirusBesar: 1
+  score: {fileID: 0}
 --- !u!70 &-2377798205754641618
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

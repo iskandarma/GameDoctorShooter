@@ -28,8 +28,11 @@ public class ArahGerakVirus : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Peluru"))
         {
-            score.TambahSkor();
+            // score.TambahSkor();
             Destroy(gameObject);      
-        }
+        } else if (collision.gameObject.CompareTag("Player"))
+        {
+            score.KurangiSkore(10);     
+        } 
     }
 }
