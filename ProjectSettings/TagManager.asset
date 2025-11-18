@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 3
   tags:
   - Peluru
+  - Dinding
+  - Virus
+  - DindingAtasBawah
+  - DindingKiriKanan
   layers:
   - Default
   - TransparentFX
