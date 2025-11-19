@@ -1,5 +1,4 @@
 using System.Collections;
-using NUnit.Framework;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -10,8 +9,6 @@ public class Timer : MonoBehaviour
     public TMP_Text TeksTimer;
 
     public float Waktu;
-
-    public float MaksimumWaktu;
 
     public bool isPause = false;
 

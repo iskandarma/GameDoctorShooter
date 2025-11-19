@@ -3,10 +3,8 @@ using UnityEngine;
 public class RandomMover : MonoBehaviour
 {
     public RectTransform uiObject;
-
     public float speed = 100f;  
     public float range = 50f;   // jarak dari posisi awal
-
     private Vector2 direction;
     private Vector2 startPos;
 

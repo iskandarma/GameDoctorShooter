@@ -4,11 +4,8 @@ using UnityEngine;
 public class Score : MonoBehaviour
 {
     public TMP_Text TeksSkor;
-
     public TMP_Text TeksHiSkor;
-
     public int Skor;
-
     public int HighScore;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -20,12 +17,6 @@ public class Score : MonoBehaviour
         TeksSkor.text = "Skor: " + Skor.ToString();
         TeksHiSkor.text = HighScore.ToString();
         PlayerPrefs.DeleteKey("SkorSekarang");
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void UpdateSkor()

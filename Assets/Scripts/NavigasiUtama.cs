@@ -6,15 +6,11 @@ public class NavigasiUtama : MonoBehaviour
 {
     public AudioSource _BGMAwal;
     public AudioSource _SFXTombolKlik;
-
     public AudioSource _SFXStartGame;
-
     public AudioSource _SFXEndGame;
-
     public AudioSource _SFXExit;
-    
-
     public Score skor;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -25,11 +21,6 @@ public class NavigasiUtama : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void BukaCredit()
     {
         _BGMAwal.Stop();
@@ -47,12 +38,6 @@ public class NavigasiUtama : MonoBehaviour
     {
         skor.SimpanSkorTertinggi();
         StartCoroutine(DelayExit());
-        // _SFXExit.Play();
-        // // StartCoroutine(delayExit());
-        // Application.Quit();
-        // #if UNITY_EDITOR
-        //     UnityEditor.EditorApplication.isPlaying = false;
-        // #endif
     }
     public void HowTo()
     {
@@ -68,9 +53,6 @@ public class NavigasiUtama : MonoBehaviour
     }
     public void Mulai()
     {
-        // _SFXTombolKlik.Play();
-        // _BGMAwal.Stop();
-        // _SFXStartGame.Play();
         StartCoroutine(DelayPlay());
         skor.SimpanSkorTertinggi();
         SceneManager.LoadScene("Level1");
@@ -88,7 +70,6 @@ public class NavigasiUtama : MonoBehaviour
     {
         _BGMAwal.Stop();
         _SFXExit.Play();
-        // StartCoroutine(delayExit());
         yield return new WaitForSeconds(_SFXExit.clip.length);
         Application.Quit();
         #if UNITY_EDITOR
@@ -100,7 +81,6 @@ public class NavigasiUtama : MonoBehaviour
     {
         _BGMAwal.Stop();
         _SFXStartGame.Play();
-        // StartCoroutine(delayExit());
         yield return new WaitForSeconds(_SFXExit.clip.length);
     }
 
